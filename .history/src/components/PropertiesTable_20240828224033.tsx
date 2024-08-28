@@ -127,7 +127,7 @@ const PropertiesTable = () => {
                 <th className="px-4 py-2 border-b text-black text-left">Name</th>
                 <th className="px-4 py-2 border-b text-black text-left">Address</th>
                 <th className="px-4 py-2 border-b text-black text-left">Type</th>
-                <th className="px-4 py-2 border-b text-black text-center">Number of Units</th>
+                <th className="px-4 py-2 border-b text-black  text-center">Number of Units</th>
                 <th className="px-4 py-2 border-b text-black text-left">Rental Cost</th>
                 <th className="px-4 py-2 border-b text-black text-left">Actions</th>
               </tr>
