@@ -18,13 +18,13 @@ const DashboardPage = () => {
     
     const token = localStorage.getItem('token');
     if (!token) {
-      router.push('/notAllowed');
+      router.push('/notAllowed'); // Redirect to login if not authenticated
     } else {
       setIsAuthenticated(true);
     }
   }, [router]);
 
-  if (!isAuthenticated) return null; 
+  if (!isAuthenticated) return null; // Render nothing if not authenticated
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">

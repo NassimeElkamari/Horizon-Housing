@@ -26,6 +26,7 @@ const LoginPage = () => {
     if (response.ok) {
       localStorage.setItem('token', data.token);
       router.push('/dashboard');
+      toast.success("Property added successfully!");
 
     } else {
       setError(data.message || 'Login failed');

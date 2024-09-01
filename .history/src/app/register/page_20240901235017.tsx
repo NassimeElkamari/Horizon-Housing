@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
   const [email, setEmail] = useState('');
@@ -28,7 +26,7 @@ const RegisterPage = () => {
 
     if (response.ok) {
       router.push('/login');
-      toast.success("Account created successfully!");
+      toast.success("Property added successfully!");
     } else {
       setError(data.message || 'Registration failed');
     }

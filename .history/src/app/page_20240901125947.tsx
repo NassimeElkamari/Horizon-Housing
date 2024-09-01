@@ -29,7 +29,7 @@ const HomePage = () => {
         <div className="container mx-auto flex justify-between items-center">
           <div className='flex gap-5'>
             <img src="/logo.png" className='w-8 h-8' alt="Horizon Housing Logo" />
-            <h1 className="text-2xl font-bold">Horizon Housing</h1>
+            <h1 className="text-2xl font-bold">Omar Arifi</h1>
           </div>
           <nav>
             <ul className="flex space-x-4">

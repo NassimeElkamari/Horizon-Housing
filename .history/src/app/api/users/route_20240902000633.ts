@@ -10,16 +10,11 @@ export async function GET(request: NextRequest) {
   const authResponse = await authenticateToken(request);
   if (authResponse) return authResponse;
 
-  const url = new URL(request.url);
-  const propertyId = url.searchParams.get('property_id');
+
   
-  const query = db('tenants').select('*');
-  
-  if (propertyId) {
-    query.where('property_id', propertyId);
-  }
-  
-  const tenants = await query;
+  const query = db('users').select('*');
+ 
+  const users = await query;
   return new NextResponse(JSON.stringify(tenants), { status: 200 });
 }
 

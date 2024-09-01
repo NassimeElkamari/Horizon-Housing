@@ -7,6 +7,7 @@ const db = knex(knexfile.development);
 
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
 
+    // Apply authentication middleware
     const authResponse = await authenticateToken(request);
     if (authResponse) return authResponse;
   

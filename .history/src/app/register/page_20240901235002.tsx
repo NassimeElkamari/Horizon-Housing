@@ -2,8 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 const RegisterPage = () => {
   const [email, setEmail] = useState('');
@@ -28,7 +26,7 @@ const RegisterPage = () => {
 
     if (response.ok) {
       router.push('/login');
-      toast.success("Account created successfully!");
+      toast.success("Property added successfully!");
     } else {
       setError(data.message || 'Registration failed');
     }
@@ -36,7 +34,6 @@ const RegisterPage = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center bg-cover"   style={{ backgroundImage: "url('/bg2.jpg')" }}>
-            <ToastContainer />
       <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md bg-opacity-90">
         <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}

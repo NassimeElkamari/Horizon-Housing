@@ -28,7 +28,7 @@ const RegisterPage = () => {
 
     if (response.ok) {
       router.push('/login');
-      toast.success("Account created successfully!");
+      toast.success("Account created successfully");
     } else {
       setError(data.message || 'Registration failed');
     }

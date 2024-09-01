@@ -24,7 +24,7 @@ export async function GET(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  
+  // Apply authentication middleware
   const authResponse = await authenticateToken(request);
   if (authResponse) return authResponse;
 

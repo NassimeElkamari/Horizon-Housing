@@ -26,7 +26,7 @@ const LoginPage = () => {
     if (response.ok) {
       localStorage.setItem('token', data.token);
       router.push('/dashboard');
-
+      
     } else {
       setError(data.message || 'Login failed');
     }

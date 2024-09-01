@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import knex from 'knex';
 import knexfile from '../../../../../knexfile';
-import { authenticateToken } from '../../../../../middleware'; 
+import { authenticateToken } from '../../../../../middleware'; // Adjust the import path based on your actual file structure
 
 const db = knex(knexfile.development);
 
 export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
-  
+  // Apply authentication middleware
   const authResponse = await authenticateToken(request);
   if (authResponse) return authResponse;
 
@@ -26,6 +26,7 @@ export async function GET(request: NextRequest, { params }: { params: { id: stri
 }
 
 export async function PUT(request: NextRequest, { params }: { params: { id: string } }) {
+  // Apply authentication middleware
   const authResponse = await authenticateToken(request);
   if (authResponse) return authResponse;
 
